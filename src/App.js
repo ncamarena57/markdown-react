@@ -1,9 +1,10 @@
+import { useState } from "react";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div id='editor'></div>
+      <textarea id='editor'></textarea>
       <div id='preview'></div>
     </div>
   );
