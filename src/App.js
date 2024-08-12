@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { marked } from 'marked';
 import './App.css';
 
 function App() {
@@ -11,7 +12,12 @@ function App() {
         }}
         value={text}
         ></textarea>
-      <div id='preview'>{text}</div>
+      <div
+        id='preview'
+        dangerouslySetInnerHTML={{
+          __html: marked(text),
+        }}
+        ></div>
     </div>
   );
 }
